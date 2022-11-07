@@ -1,5 +1,5 @@
 import React from 'react';
-import { Container, InputSingle, SectionLogin } from '../../Styled/styled';
+import { Container, SectionLogin } from '../../Styled/styled';
 import Input from '../Forms/Input';
 import Submit from '../Forms/Submit';
 

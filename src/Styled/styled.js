@@ -7,6 +7,41 @@ export const Container = styled.div`
     padding: 0 2%;
 `;
 
+export const AjusteHeader = styled.div`
+    width: 100%;
+    height: 65px;
+    /* Professor, criei essa classe pois coloquei o Header como position fixed, ai 
+    quando um element entrava na página, ficava em cima */
+`;
+
+export const H2Titulo = styled.h2`
+    margin: 30px 0 40px 0;
+    font-size: 1.6em;
+    text-align: center;
+    position: relative;
+    display: inline-block;
+    left: 50%;
+    transform: translateX(-50%);
+    ::before {
+        content: '';
+        width: 50%;
+        height: 4px;
+        background-color: var(--react-blue);
+        position: absolute;
+        bottom: -10px;
+        left: 50%;
+        transform: translateX(-50%);
+        transition: 0.3s;
+    }
+    :hover::before {
+        width: 75%;
+    }
+    svg {
+        font-size: 1.3em;
+        margin-right: 7px;
+    }
+`;
+
 export const SectionHeader = styled.header`
     width: 100%;
     padding: 15px;
@@ -164,4 +199,97 @@ export const SubmitSingle = styled.div`
         }
 
     }
+`;
+
+export const TableResponsive = styled.section`
+    table {
+        width: 100%;
+        max-width: 1250px;
+        text-align: center;
+        margin: 30px auto;
+        padding: 0 2%;
+        border-collapse: collapse;
+        border-spacing: 0;
+        tr {
+            :nth-child(odd) {
+                td {
+                    background-color: #1c1f25;
+                }
+            }
+        }
+        th {
+            background-color: black;
+            font-weight: bold;
+        }
+        td {
+            text-align: left;
+        }
+        td, th {
+            padding: 10px;
+            border-right: var(--react-blue) solid 1px;
+            vertical-align: middle;
+            :last-child {
+                border-right: 0;
+            }
+        }
+        td.excluir {
+            border-right: 0;
+        }
+        thead {
+            tr > th:last-of-type{
+                display: none;
+            }
+        }
+    }
+    @media screen and (max-width: 1146px) {
+        table.responsive {
+            display: block;
+            position: relative;
+            width: 100%;
+            thead, tbody, th, td, tr {
+                display: block;
+            }
+            text-decoration, th {
+                /* padding: 12px 10px; */
+            }
+            thead {
+                float: left;
+                tr > th:last-of-type{
+                    background-color: black;
+                    color: black;
+                    display: block;
+                }
+            }
+            tbody {
+                width: auto;
+                position: relative;
+                overflow-x: auto;
+                -webkit-overflow-scrolling: touch;
+                white-space: nowrap;
+                tr {
+                    display: inline-block;
+                }
+                
+            }
+            tr {
+                :last-of-type {
+                    td {
+                        border: 0;
+                    }
+                }
+            }
+            td, th {
+                :last-child {
+                    border-right: var(--react-blue) solid 1px;
+                }
+            }
+            td.excluir {
+                border-right: var(--react-blue) solid 1px;
+            }
+        }
+    }
+`;
+
+export const Consulta = styled.section`
+
 `;

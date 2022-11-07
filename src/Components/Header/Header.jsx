@@ -34,7 +34,7 @@ const Header = ()=> {
                         <li>
                             Consultar
                             <ul className="dropBox">
-                                <li><a href="">Usuario</a></li>
+                                <li><Link to='/consulta-usuario'>Usuário</Link></li>
                                 <li><a href="">Motorista</a></li>
                                 <li><a href="">Carro</a></li>
                                 <li><a href="">Empresa</a></li>
