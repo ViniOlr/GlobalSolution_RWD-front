@@ -11,6 +11,9 @@ export const SectionHeader = styled.header`
     width: 100%;
     padding: 15px;
     background-color: rgba(0, 0, 0, 0.3);
+    position: fixed;
+    width: 100%;
+    z-index: 999;
     > div {
         display: flex;
         justify-content: space-between;
@@ -54,5 +57,23 @@ export const SectionHeader = styled.header`
 `;
 
 export const SectionHome = styled.section`
-
+    height: 100vh;
+    position: relative;
+    .text {
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        text-align: center;
+        h2 {
+            font-size: 4em;        
+            span {
+                color: var(--react-blue);
+            }
+        }
+        p {
+            font-size: 1.4em;
+        }
+    }
+    
 `;
