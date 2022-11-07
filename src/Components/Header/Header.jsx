@@ -1,4 +1,5 @@
 import React from 'react';
+import { Link } from 'react-router-dom';
 import { Container, SectionHeader } from '../../Styled/styled';
 
 const Header = ()=> {
@@ -7,7 +8,7 @@ const Header = ()=> {
     <SectionHeader>
         <Container>
             <div className="logo">
-                <h1>Saving Employees</h1>
+                <Link to='/'><h1>Saving Employees</h1></Link>
             </div>
             <div className="menuDesktop">
                 <nav>
@@ -39,8 +40,7 @@ const Header = ()=> {
                                 <li><a href="">Empresa</a></li>
                             </ul>
                         </li>
-                        <li><a href="/login"><button>Login</button></a></li>
-                        <li></li>
+                        <li><Link to='/login'><button>Login</button></Link></li>
                     </ul>
                 </nav>
             </div>
