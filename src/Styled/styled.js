@@ -303,6 +303,6 @@ export const Cadastro = styled.section`
         width: 100%;
         max-width: 750px;
         margin: 30px auto;
-        padding-bottom: 30px;
+        padding: 0 2% 30px 2%;
     }
 `;

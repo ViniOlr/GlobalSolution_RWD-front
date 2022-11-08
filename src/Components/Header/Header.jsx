@@ -18,7 +18,7 @@ const Header = ()=> {
                             <ul className="dropBox">
                                 <li><Link to='/cadastro-usuario'>Usuário</Link></li>
                                 <li><Link to='/cadastro-motorista'>Motorista</Link></li>
-                                <li><a href="">Carro</a></li>
+                                <li><Link to='/cadastro-carro'>Carro</Link></li>
                                 <li><a href="">Empresa</a></li>
                             </ul>
                         </li>

@@ -1,5 +1,6 @@
 import { Route, Routes } from 'react-router';
 import './App.css'
+import CadCarro from './Components/Cadastro/CadCarro';
 import CadMotorista from './Components/Cadastro/CadMotorista';
 import CadUsuario from './Components/Cadastro/CadUsuario';
 import ConCarro from './Components/Consulta/ConCarro';
@@ -21,6 +22,7 @@ function App() {
         <Route path='/login' element={<Login />} />
         <Route path='/cadastro-usuario' element={<CadUsuario />} />
         <Route path='/cadastro-motorista' element={<CadMotorista />} />
+        <Route path='/cadastro-carro' element={<CadCarro />} />
         <Route path='/consulta-usuario' element={<ConUsuario />} />
         <Route path='/consulta-motorista' element={<ConMotorista />} />
         <Route path='/consulta-carro' element={<ConCarro />} />
