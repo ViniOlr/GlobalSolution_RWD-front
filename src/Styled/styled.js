@@ -7,15 +7,8 @@ export const Container = styled.div`
     padding: 0 2%;
 `;
 
-export const AjusteHeader = styled.div`
-    width: 100%;
-    height: 65px;
-    /* Professor, criei essa classe pois coloquei o Header como position fixed, ai 
-    quando um element entrava na página, ficava em cima */
-`;
-
 export const H2Titulo = styled.h2`
-    margin: 30px 0 40px 0;
+    margin: 95px 0 40px 0;
     font-size: 1.6em;
     text-align: center;
     position: relative;

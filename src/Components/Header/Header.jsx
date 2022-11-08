@@ -19,7 +19,7 @@ const Header = ()=> {
                                 <li><Link to='/cadastro-usuario'>Usuário</Link></li>
                                 <li><Link to='/cadastro-motorista'>Motorista</Link></li>
                                 <li><Link to='/cadastro-carro'>Carro</Link></li>
-                                <li><a href="">Empresa</a></li>
+                                <li><Link to='/cadastro-empresa'>Empresa</Link></li>
                             </ul>
                         </li>
                         <li>

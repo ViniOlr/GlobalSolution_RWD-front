@@ -1,6 +1,7 @@
 import { Route, Routes } from 'react-router';
 import './App.css'
 import CadCarro from './Components/Cadastro/CadCarro';
+import CadEmpresa from './Components/Cadastro/CadEmpresa';
 import CadMotorista from './Components/Cadastro/CadMotorista';
 import CadUsuario from './Components/Cadastro/CadUsuario';
 import ConCarro from './Components/Consulta/ConCarro';
@@ -16,13 +17,13 @@ function App() {
   return (
     <>
       <Header />
-      <AjusteHeader />
       <Routes>
         <Route path='/' element={<Home />} />
         <Route path='/login' element={<Login />} />
         <Route path='/cadastro-usuario' element={<CadUsuario />} />
         <Route path='/cadastro-motorista' element={<CadMotorista />} />
         <Route path='/cadastro-carro' element={<CadCarro />} />
+        <Route path='/cadastro-empresa' element={<CadEmpresa />} />
         <Route path='/consulta-usuario' element={<ConUsuario />} />
         <Route path='/consulta-motorista' element={<ConMotorista />} />
         <Route path='/consulta-carro' element={<ConCarro />} />
