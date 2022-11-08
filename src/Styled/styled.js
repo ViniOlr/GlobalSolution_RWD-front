@@ -151,7 +151,8 @@ export const InputSingle = styled.div`
         z-index: 1;
         left: 5px;
         bottom: 6px;
-        color: var(--react-blue);
+        /* color: var(--react-blue); */
+        color: white;
         cursor: text;
         transition: 0.5s ease-in-out;
         font-weight: bold;
@@ -176,7 +177,7 @@ export const InputSingle = styled.div`
     .inputText:valid~label {
         transform: translateY(-27px);
         font-size: 14px;
-        color: var(--roxo);
+        color: var(--react-blue);
         left: 0;
     }
 `;
