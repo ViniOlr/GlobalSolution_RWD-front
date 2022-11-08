@@ -11,15 +11,15 @@ function ConMotorista() {
             <table className='responsive'>
                 <thead>
                     <tr>
-                        <th>ID Motorista</th>
+                        <th>#</th>
                         <th>Nome</th>
                         <th>RG</th>
                         <th>CPF</th>
                         <th>Telefone</th>
                         <th>Email</th>
                         <th>Data de Nascimento</th>
-                        <th>Número da Habilitação</th>
-                        <th>Categoria da Habilitação</th>
+                        <th>Num. da Habilitação</th>
+                        <th>Cat. da Habilitação</th>
                         <th>Data de expedição</th>
                         <th colSpan='2' className='acoes'>Ações</th>
                         <th>a</th>

@@ -11,7 +11,7 @@ function ConCarro() {
             <table className='responsive'>
                 <thead>
                     <tr>
-                        <th>ID do carro</th>
+                        <th>#</th>
                         <th>Marca</th>                        
                         <th>Modelo</th>                        
                         <th>Ano</th>                        

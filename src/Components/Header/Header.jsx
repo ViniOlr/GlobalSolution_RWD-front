@@ -28,7 +28,7 @@ const Header = ()=> {
                                 <li><Link to='/consulta-usuario'>Usuário</Link></li>
                                 <li><Link to='/consulta-motorista'>Motorista</Link></li>
                                 <li><Link to='/consulta-carro'>Carro</Link></li>
-                                <li><a href="">Empresa</a></li>
+                                <li><Link to='/consulta-empresa'>Empresa</Link></li>
                             </ul>
                         </li>
                         <li><Link to='/login'><button>Login</button></Link></li>

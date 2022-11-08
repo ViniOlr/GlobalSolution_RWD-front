@@ -1,6 +1,7 @@
 import { Route, Routes } from 'react-router';
 import './App.css'
 import ConCarro from './Components/Consulta/ConCarro';
+import ConEmpresa from './Components/Consulta/ConEmpresa';
 import ConMotorista from './Components/Consulta/ConMotorista';
 import ConUsuario from './Components/Consulta/ConUsuario';
 import Header from './Components/Header/Header';
@@ -19,6 +20,7 @@ function App() {
         <Route path='/consulta-usuario' element={<ConUsuario />} />
         <Route path='/consulta-motorista' element={<ConMotorista />} />
         <Route path='/consulta-carro' element={<ConCarro />} />
+        <Route path='/consulta-empresa' element={<ConEmpresa />} />
       </Routes>
     </>
   );
