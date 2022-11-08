@@ -1,5 +1,6 @@
 import { Route, Routes } from 'react-router';
 import './App.css'
+import ConMotorista from './Components/Consulta/ConMotorista';
 import ConUsuario from './Components/Consulta/ConUsuario';
 import Header from './Components/Header/Header';
 import Home from './Components/Home/Home';
@@ -15,6 +16,7 @@ function App() {
         <Route path='/' element={<Home />} />
         <Route path='/login' element={<Login />} />
         <Route path='/consulta-usuario' element={<ConUsuario />} />
+        <Route path='/consulta-motorista' element={<ConMotorista />} />
       </Routes>
     </>
   );

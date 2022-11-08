@@ -231,6 +231,9 @@ export const TableResponsive = styled.section`
             :last-child {
                 border-right: 0;
             }
+            a {
+                color: white;
+            }
         }
         td.excluir {
             border-right: 0;

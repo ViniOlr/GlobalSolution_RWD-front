@@ -1,113 +1,112 @@
 import React from 'react';
-import { BsPencilFill, BsTrashFill } from 'react-icons/bs';
 import { Link } from 'react-router-dom';
 import { Consulta, H2Titulo, TableResponsive } from '../../Styled/styled';
-import Input from '../Forms/Input';
+import { BsPencilFill, BsTrashFill } from 'react-icons/bs'
 
-function ConUsuario() {
+function ConMotorista() {
   return (
     <Consulta>
-        <H2Titulo>Consulta de Usuário</H2Titulo>
+        <H2Titulo>Consulta de Motorista</H2Titulo>
         <TableResponsive>
             <table className='responsive'>
                 <thead>
                     <tr>
-                        <th>RM</th>
+                        <th>ID Motorista</th>
                         <th>Nome</th>
                         <th>RG</th>
                         <th>CPF</th>
                         <th>Telefone</th>
                         <th>Email</th>
                         <th>Data de Nascimento</th>
-                        <th>Setor</th>
-                        <th>Login</th>
-                        <th>Senha</th>
+                        <th>Número da Habilitação</th>
+                        <th>Categoria da Habilitação</th>
+                        <th>Data de expedição</th>
                         <th colSpan='2' className='acoes'>Ações</th>
                         <th>a</th>
                     </tr>
                 </thead>
                 <tbody>
                     <tr>
-                        <td>93613</td>
+                        <td>45</td>
                         <td>Vinicius de Oliveira</td>
                         <td>12345678901234</td>
                         <td>526761451847</td>
                         <td>(11) 96630-9946</td>
                         <td>vini@gmail.com</td>
                         <td>15/05/2003</td>
-                        <td>Administrativo</td>
-                        <td>ViniOlr</td>
-                        <td>123</td>
+                        <td>326893458168</td>
+                        <td>AB</td>
+                        <td>24/06/2022</td>
                         <td className='excluir'><BsTrashFill /></td>
                         <td><Link to=''><BsPencilFill /></Link></td>
                     </tr>
                     <tr>
-                        <td>93613</td>
+                        <td>45</td>
                         <td>Vinicius de Oliveira</td>
                         <td>12345678901234</td>
                         <td>526761451847</td>
                         <td>(11) 96630-9946</td>
                         <td>vini@gmail.com</td>
                         <td>15/05/2003</td>
-                        <td>Administrativo</td>
-                        <td>ViniOlr</td>
-                        <td>123</td>
+                        <td>326893458168</td>
+                        <td>AB</td>
+                        <td>24/06/2022</td>
                         <td className='excluir'><BsTrashFill /></td>
                         <td><Link to=''><BsPencilFill /></Link></td>
                     </tr>
                     <tr>
-                        <td>93613</td>
+                        <td>45</td>
                         <td>Vinicius de Oliveira</td>
                         <td>12345678901234</td>
                         <td>526761451847</td>
                         <td>(11) 96630-9946</td>
                         <td>vini@gmail.com</td>
                         <td>15/05/2003</td>
-                        <td>Administrativo</td>
-                        <td>ViniOlr</td>
-                        <td>123</td>
+                        <td>326893458168</td>
+                        <td>AB</td>
+                        <td>24/06/2022</td>
                         <td className='excluir'><BsTrashFill /></td>
                         <td><Link to=''><BsPencilFill /></Link></td>
                     </tr>
                     <tr>
-                        <td>93613</td>
+                        <td>45</td>
                         <td>Vinicius de Oliveira</td>
                         <td>12345678901234</td>
                         <td>526761451847</td>
                         <td>(11) 96630-9946</td>
                         <td>vini@gmail.com</td>
                         <td>15/05/2003</td>
-                        <td>Administrativo</td>
-                        <td>ViniOlr</td>
-                        <td>123</td>
+                        <td>326893458168</td>
+                        <td>AB</td>
+                        <td>24/06/2022</td>
                         <td className='excluir'><BsTrashFill /></td>
                         <td><Link to=''><BsPencilFill /></Link></td>
                     </tr>
                     <tr>
-                        <td>93613</td>
+                        <td>45</td>
                         <td>Vinicius de Oliveira</td>
                         <td>12345678901234</td>
                         <td>526761451847</td>
                         <td>(11) 96630-9946</td>
                         <td>vini@gmail.com</td>
                         <td>15/05/2003</td>
-                        <td>Administrativo</td>
-                        <td>ViniOlr</td>
-                        <td>123</td>
+                        <td>326893458168</td>
+                        <td>AB</td>
+                        <td>24/06/2022</td>
                         <td className='excluir'><BsTrashFill /></td>
                         <td><Link to=''><BsPencilFill /></Link></td>
                     </tr>
                     <tr>
-                        <td>93613</td>
+                        <td>45</td>
                         <td>Vinicius de Oliveira</td>
                         <td>12345678901234</td>
                         <td>526761451847</td>
                         <td>(11) 96630-9946</td>
                         <td>vini@gmail.com</td>
                         <td>15/05/2003</td>
-                        <td>Administrativo</td>
-                        <td>ViniOlr</td>
-                        <td>123</td>
+                        <td>326893458168</td>
+                        <td>AB</td>
+                        <td>24/06/2022</td>
                         <td className='excluir'><BsTrashFill /></td>
                         <td><Link to=''><BsPencilFill /></Link></td>
                     </tr>
@@ -118,4 +117,4 @@ function ConUsuario() {
   );
 }
 
-export default ConUsuario;
+export default ConMotorista;
