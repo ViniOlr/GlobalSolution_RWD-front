@@ -45,7 +45,7 @@ export const H2Titulo = styled.h2`
 export const SectionHeader = styled.header`
     width: 100%;
     padding: 15px;
-    background-color: rgba(0, 0, 0, 0.3);
+    background-color: rgba(0, 0, 0, 0.7);
     position: fixed;
     width: 100%;
     z-index: 999;
@@ -72,8 +72,8 @@ export const SectionHeader = styled.header`
                 top: 14px; /* 43 */
                 left: 50%;
                 transform: translateX(-50%);
-                background: rgba(0, 0, 0, 0.3);
-                background: linear-gradient(180deg, rgba(0, 0, 0, 0.0) 0%, rgba(0, 0, 0, 0.3) 15px);
+                background: rgba(0, 0, 0, 0.7);
+                background: linear-gradient(180deg, rgba(0, 0, 0, 0.0) 0%, rgba(0, 0, 0, 0.7) 15px);
                 padding: 33px 15px 10px 15px;
                 li a {
                     color: white;
@@ -294,5 +294,14 @@ export const TableResponsive = styled.section`
 `;
 
 export const Consulta = styled.section`
+    padding-bottom: 30px;
+`;
 
+export const Cadastro = styled.section`
+    form {
+        width: 100%;
+        max-width: 750px;
+        margin: 30px auto;
+        padding-bottom: 30px;
+    }
 `;
