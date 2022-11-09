@@ -229,6 +229,9 @@ export const TableResponsive = styled.section`
                 color: white;
             }
         }
+        th.acoes {
+            border-right: 0;
+        }
         td.excluir {
             border-right: 0;
         }
@@ -282,6 +285,9 @@ export const TableResponsive = styled.section`
             }
             td.excluir {
                 border-right: var(--react-blue) solid 1px;
+            }
+            th.acoes {
+                 border-right: var(--react-blue) solid 1px;
             }
         }
     }
