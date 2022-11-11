@@ -57,6 +57,14 @@ function CadUsuario() {
         }
     }, [id])
 
+    const verificar = sessionStorage.getItem("usuario-validado")
+
+    useEffect(()=>{
+        if (verificar == null) {
+            window.location = '/'
+        }
+    })
+
   return (
     <Cadastro>
         <H2Titulo>Cadastro de Usuario</H2Titulo>

@@ -28,6 +28,14 @@ function ConMotorista() {
         })
     }
 
+    const verificar = sessionStorage.getItem("usuario-validado")
+
+    useEffect(()=>{
+        if (verificar == null) {
+            window.location = '/'
+        }
+    })
+
   return (
     <Consulta>
         <H2Titulo>Consulta de Motorista</H2Titulo>

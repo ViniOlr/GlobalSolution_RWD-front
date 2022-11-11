@@ -4,11 +4,20 @@ import { Container, SectionHeader } from '../../Styled/styled';
 
 const Header = ()=> {
 
+    const logout = ()=>{
+        sessionStorage.removeItem("usuario-validado")
+        window.location = '/login'
+    }
+
+    const usuario = sessionStorage.getItem("usuario-validado")
+
   return (
     <SectionHeader>
         <Container>
             <div className="logo">
-                <Link to='/'><h1>Saving Employees</h1></Link>
+                <Link to='/'>
+                    <h1>Saving Employees</h1>
+                </Link>
             </div>
             <div className="menuDesktop">
                 <nav>
@@ -31,7 +40,7 @@ const Header = ()=> {
                                 <li><Link to='/consulta-empresa'>Empresa</Link></li>
                             </ul>
                         </li>
-                        <li><Link to='/login'><button>Login</button></Link></li>
+                        <li><Link to='/login'><button onClick={usuario && (logout)}>{usuario ? 'Logout' : 'Logar'}</button></Link></li>
                     </ul>
                 </nav>
             </div>

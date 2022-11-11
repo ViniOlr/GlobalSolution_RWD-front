@@ -30,6 +30,14 @@ function ConEmpresa() {
         })
     }
 
+    const verificar = sessionStorage.getItem("usuario-validado")
+
+    useEffect(()=>{
+        if (verificar == null) {
+            window.location = '/'
+        }
+    })
+
     return (
         <Consulta>
             <H2Titulo>Consulta de Empresa</H2Titulo>

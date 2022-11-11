@@ -53,6 +53,14 @@ function CadEmpresa() {
         }
     }, [id])
 
+    const verificar = sessionStorage.getItem("usuario-validado")
+
+    useEffect(()=>{
+        if (verificar == null) {
+            window.location = '/'
+        }
+    })
+
   return (
     <Cadastro>
         <H2Titulo>Cadastro de Empresa</H2Titulo>

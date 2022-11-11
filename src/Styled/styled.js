@@ -187,6 +187,7 @@ export const SubmitSingle = styled.div`
         text-transform: uppercase;
         font-weight: bold;
         transition: 0.7s;
+        margin-bottom: 15px;
         :hover {
             background-color: white;
             color:black;
@@ -310,5 +311,9 @@ export const Cadastro = styled.section`
         max-width: 750px;
         margin: 30px auto;
         padding: 0 2% 30px 2%;
+        a {
+            color: white;
+            font-size: 1.2em;
+        }
     }
 `;

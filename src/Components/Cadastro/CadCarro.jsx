@@ -53,6 +53,14 @@ function CadCarro() {
         }
     }, [id])
 
+    const verificar = sessionStorage.getItem("usuario-validado")
+
+    useEffect(()=>{
+        if (verificar == null) {
+            window.location = '/'
+        }
+    })
+
   return (
     <Cadastro>
         <H2Titulo>Cadastro de Carro</H2Titulo>
