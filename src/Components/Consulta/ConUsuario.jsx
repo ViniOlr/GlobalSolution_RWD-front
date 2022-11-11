@@ -12,7 +12,7 @@ function ConUsuario() {
             return resp.json()
         }).then((resp) => {
             setUsuarios(resp)
-            console.log(resp)
+            // console.log(resp)
         }).catch((error) => {
             console.log(error)
         })
