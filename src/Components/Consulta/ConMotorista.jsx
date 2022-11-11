@@ -1,9 +1,33 @@
-import React from 'react';
+import React, { useEffect, useState } from 'react';
 import { Link } from 'react-router-dom';
 import { Consulta, H2Titulo, TableResponsive } from '../../Styled/styled';
 import { BsPencilFill, BsTrashFill } from 'react-icons/bs'
 
 function ConMotorista() {
+
+    const [motorista, setMotorista] = useState([]);
+
+    useEffect(()=>{
+        fetch("http://localhost:8080/GlobalSolution_RWD_back/rest/motorista").then((resp)=>{
+            return resp.json()
+        }).then((resp) => {
+            setMotorista(resp)
+            // console.log(resp)
+        }).catch((error) => {
+            console.log(error)
+        })
+    }, [])
+
+    const handleDelete = (id)=>{
+        fetch(`http://localhost:8080/GlobalSolution_RWD_back/rest/motorista/${id}`, {
+            method:"delete"
+        }).then(()=>{
+            window.location = "/consulta-motorista"
+        }).catch((error)=>{
+            console.log(error)
+        })
+    }
+
   return (
     <Consulta>
         <H2Titulo>Consulta de Motorista</H2Titulo>
@@ -26,90 +50,22 @@ function ConMotorista() {
                     </tr>
                 </thead>
                 <tbody>
-                    <tr>
-                        <td>45</td>
-                        <td>Vinicius de Oliveira</td>
-                        <td>12345678901234</td>
-                        <td>526761451847</td>
-                        <td>(11) 96630-9946</td>
-                        <td>vini@gmail.com</td>
-                        <td>15/05/2003</td>
-                        <td>326893458168</td>
-                        <td>AB</td>
-                        <td>24/06/2022</td>
-                        <td className='excluir'><BsTrashFill /></td>
-                        <td><Link to=''><BsPencilFill /></Link></td>
-                    </tr>
-                    <tr>
-                        <td>45</td>
-                        <td>Vinicius de Oliveira</td>
-                        <td>12345678901234</td>
-                        <td>526761451847</td>
-                        <td>(11) 96630-9946</td>
-                        <td>vini@gmail.com</td>
-                        <td>15/05/2003</td>
-                        <td>326893458168</td>
-                        <td>AB</td>
-                        <td>24/06/2022</td>
-                        <td className='excluir'><BsTrashFill /></td>
-                        <td><Link to=''><BsPencilFill /></Link></td>
-                    </tr>
-                    <tr>
-                        <td>45</td>
-                        <td>Vinicius de Oliveira</td>
-                        <td>12345678901234</td>
-                        <td>526761451847</td>
-                        <td>(11) 96630-9946</td>
-                        <td>vini@gmail.com</td>
-                        <td>15/05/2003</td>
-                        <td>326893458168</td>
-                        <td>AB</td>
-                        <td>24/06/2022</td>
-                        <td className='excluir'><BsTrashFill /></td>
-                        <td><Link to=''><BsPencilFill /></Link></td>
-                    </tr>
-                    <tr>
-                        <td>45</td>
-                        <td>Vinicius de Oliveira</td>
-                        <td>12345678901234</td>
-                        <td>526761451847</td>
-                        <td>(11) 96630-9946</td>
-                        <td>vini@gmail.com</td>
-                        <td>15/05/2003</td>
-                        <td>326893458168</td>
-                        <td>AB</td>
-                        <td>24/06/2022</td>
-                        <td className='excluir'><BsTrashFill /></td>
-                        <td><Link to=''><BsPencilFill /></Link></td>
-                    </tr>
-                    <tr>
-                        <td>45</td>
-                        <td>Vinicius de Oliveira</td>
-                        <td>12345678901234</td>
-                        <td>526761451847</td>
-                        <td>(11) 96630-9946</td>
-                        <td>vini@gmail.com</td>
-                        <td>15/05/2003</td>
-                        <td>326893458168</td>
-                        <td>AB</td>
-                        <td>24/06/2022</td>
-                        <td className='excluir'><BsTrashFill /></td>
-                        <td><Link to=''><BsPencilFill /></Link></td>
-                    </tr>
-                    <tr>
-                        <td>45</td>
-                        <td>Vinicius de Oliveira</td>
-                        <td>12345678901234</td>
-                        <td>526761451847</td>
-                        <td>(11) 96630-9946</td>
-                        <td>vini@gmail.com</td>
-                        <td>15/05/2003</td>
-                        <td>326893458168</td>
-                        <td>AB</td>
-                        <td>24/06/2022</td>
-                        <td className='excluir'><BsTrashFill /></td>
-                        <td><Link to=''><BsPencilFill /></Link></td>
-                    </tr>
+                    {motorista.map((motorista)=>(
+                        <tr key={motorista.id}>
+                            <td>{motorista.id}</td>
+                            <td>{motorista.nome}</td>
+                            <td>{motorista.rg}</td>
+                            <td>{motorista.cpf}</td>
+                            <td>{motorista.telefone}</td>
+                            <td>{motorista.email}</td>
+                            <td>{motorista.dataNascimento}</td>
+                            <td>{motorista.numeroHabilitacao}</td>
+                            <td>{motorista.categoriaHabilitacao}</td>
+                            <td>{motorista.dataExpedicao}</td>
+                            <td className='excluir'><button onClick={handleDelete.bind(this, motorista.id)}><BsTrashFill /></button></td>
+                            <td><Link to={`/editar-motorista/${motorista.id}`}><BsPencilFill /></Link></td>
+                        </tr>
+                    ))}
                 </tbody>
             </table>
         </TableResponsive>
