@@ -136,7 +136,7 @@ function CadMotorista() {
             <Submit 
                 valor={id ? 'Editar' : 'Cadastrar'}
             />
-            <Link to='/consulta-usuario'>Cancelar</Link>
+            <Link to='/consulta-motorista'>Cancelar</Link>
         </form>
     </Cadastro>
   );

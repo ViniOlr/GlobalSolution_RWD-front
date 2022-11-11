@@ -1,9 +1,35 @@
-import React from 'react';
+import React, { useEffect, useState } from 'react';
 import { BsPencilFill, BsTrashFill } from 'react-icons/bs';
 import { Link } from 'react-router-dom';
 import { Consulta, H2Titulo, TableResponsive } from '../../Styled/styled';
 
 function ConCarro() {
+
+    const [carros, setCarros] = useState([])
+
+    useEffect(()=>{
+        fetch("http://localhost:8080/GlobalSolution_RWD_back/rest/carro")
+            .then((resp)=>{
+                return resp.json()
+            })
+            .then((resp)=>{
+                setCarros(resp)
+                console.log(resp)
+            }).catch((error)=>{
+                console.lof(error)
+            })
+    }, [])
+
+    const handleDelete = (id)=>{
+        fetch(`http://localhost:8080/GlobalSolution_RWD_back/rest/carro/${id}`, {
+            method:"delete"
+        }).then(()=>{
+            window.location = "/consulta-carro"
+        }).catch((error)=>{
+            console.log(error)
+        })
+    }
+
   return (
     <Consulta>
         <H2Titulo>Consulta de Carro</H2Titulo>
@@ -22,76 +48,18 @@ function ConCarro() {
                     </tr>
                 </thead>
                 <tbody>
-                    <tr>
-                        <td>95</td>
-                        <td>Chevrolet</td>
-                        <td>Tracker</td>
-                        <td>2021</td>
-                        <td>FGH1234</td>
-                        <td>11 km/l</td>
-                        <td className='excluir'><BsTrashFill /></td>
-                        <td><Link to=''><BsPencilFill /></Link></td>
-                    </tr>
-                    <tr>
-                        <td>95</td>
-                        <td>Chevrolet</td>
-                        <td>Tracker</td>
-                        <td>2021</td>
-                        <td>FGH1234</td>
-                        <td>11 km/l</td>
-                        <td className='excluir'><BsTrashFill /></td>
-                        <td><Link to=''><BsPencilFill /></Link></td>
-                    </tr>
-                    <tr>
-                        <td>95</td>
-                        <td>Chevrolet</td>
-                        <td>Tracker</td>
-                        <td>2021</td>
-                        <td>FGH1234</td>
-                        <td>11 km/l</td>
-                        <td className='excluir'><BsTrashFill /></td>
-                        <td><Link to=''><BsPencilFill /></Link></td>
-                    </tr>
-                    <tr>
-                        <td>95</td>
-                        <td>Chevrolet</td>
-                        <td>Tracker</td>
-                        <td>2021</td>
-                        <td>FGH1234</td>
-                        <td>11 km/l</td>
-                        <td className='excluir'><BsTrashFill /></td>
-                        <td><Link to=''><BsPencilFill /></Link></td>
-                    </tr>
-                    <tr>
-                        <td>95</td>
-                        <td>Chevrolet</td>
-                        <td>Tracker</td>
-                        <td>2021</td>
-                        <td>FGH1234</td>
-                        <td>11 km/l</td>
-                        <td className='excluir'><BsTrashFill /></td>
-                        <td><Link to=''><BsPencilFill /></Link></td>
-                    </tr>
-                    <tr>
-                        <td>95</td>
-                        <td>Chevrolet</td>
-                        <td>Tracker</td>
-                        <td>2021</td>
-                        <td>FGH1234</td>
-                        <td>11 km/l</td>
-                        <td className='excluir'><BsTrashFill /></td>
-                        <td><Link to=''><BsPencilFill /></Link></td>
-                    </tr>
-                    <tr>
-                        <td>95</td>
-                        <td>Chevrolet</td>
-                        <td>Tracker</td>
-                        <td>2021</td>
-                        <td>FGH1234</td>
-                        <td>11 km/l</td>
-                        <td className='excluir'><BsTrashFill /></td>
-                        <td><Link to=''><BsPencilFill /></Link></td>
-                    </tr>
+                    {carros.map((carro)=>(
+                        <tr>
+                            <td>{carro.id}</td>
+                            <td>{carro.marca}</td>
+                            <td>{carro.modelo}</td>
+                            <td>{carro.ano}</td>
+                            <td>{carro.placa}</td>
+                            <td>{carro.kmPorLitro} km/l</td>
+                            <td className='excluir'><button onClick={handleDelete.bind(this, carro.id)}><BsTrashFill /></button></td>
+                            <td><Link to={`/editar-carro/${carro.id}`}><BsPencilFill /></Link></td>
+                        </tr>
+                    ))}
                 </tbody>
             </table>
         </TableResponsive>
