@@ -75,6 +75,10 @@ export const SectionHeader = styled.header`
             button {
                 cursor: pointer;
                 padding: 5px 15px;
+                background-color: var(--react-blue);
+                font-weight: bold;
+                text-transform: uppercase;
+                border-radius: 7px;
             }
             :hover ul.dropBox {
                 /* background-color: red; */
