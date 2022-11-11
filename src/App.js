@@ -11,7 +11,6 @@ import ConUsuario from './Components/Consulta/ConUsuario';
 import Header from './Components/Header/Header';
 import Home from './Components/Home/Home';
 import Login from './Components/Login/Login';
-import { AjusteHeader } from './Styled/styled';
 
 function App() {
   return (
@@ -19,15 +18,24 @@ function App() {
       <Header />
       <Routes>
         <Route path='/' element={<Home />} />
+
         <Route path='/login' element={<Login />} />
+
         <Route path='/cadastro-usuario' element={<CadUsuario />} />
-        <Route path='/cadastro-motorista' element={<CadMotorista />} />
-        <Route path='/cadastro-carro' element={<CadCarro />} />
-        <Route path='/cadastro-empresa' element={<CadEmpresa />} />
         <Route path='/consulta-usuario' element={<ConUsuario />} />
+        <Route path='/editar-usuario/:id' element={<CadUsuario />} />
+
+        <Route path='/cadastro-motorista' element={<CadMotorista />} />
         <Route path='/consulta-motorista' element={<ConMotorista />} />
+        <Route path='/editar-motorista/:id' element={<CadMotorista />} />
+
+        <Route path='/cadastro-carro' element={<CadCarro />} />
         <Route path='/consulta-carro' element={<ConCarro />} />
+        <Route path='/editar-carro/:id' element={<CadCarro />} />
+
+        <Route path='/cadastro-empresa' element={<CadEmpresa />} />
         <Route path='/consulta-empresa' element={<ConEmpresa />} />
+        <Route path='/editar-empresa/:id' element={<CadEmpresa />} />
       </Routes>
     </>
   );

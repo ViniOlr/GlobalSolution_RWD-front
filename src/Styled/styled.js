@@ -178,7 +178,7 @@ export const InputSingle = styled.div`
 export const SubmitSingle = styled.div`
     width: 100%;
     margin-top: 40px;
-    input[type='submit'] {
+    button {
         cursor: pointer;
         width: 100%;
         padding: 13px 0;
@@ -217,6 +217,13 @@ export const TableResponsive = styled.section`
         }
         td {
             text-align: left;
+            button {
+                background: transparent;
+                color: white;
+                border: 0;
+                font-size: 16px;
+                cursor: pointer;
+            }
         }
         td, th {
             padding: 10px;

@@ -6,7 +6,7 @@ import { SubmitSingle } from '../../Styled/styled';
 function Submit(props) {
   return (
     <SubmitSingle>
-        <input type="submit" value={props.valor} />
+        <button type='submit'>{props.valor}</button>
     </SubmitSingle>
   );
 }

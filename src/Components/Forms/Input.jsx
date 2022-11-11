@@ -6,7 +6,14 @@ const Input = (props)=> {
 
   return (
     <InputSingle>
-        <input className='inputText' type={props.type} name={props.name} id={props.id} required />
+        <input 
+          className='inputText' 
+          type={props.type} 
+          name={props.name} 
+          id={props.id} 
+          value={props.value}
+          onChange={props.handleChange}
+          required />
         <label>{props.label}</label>
     </InputSingle>
   );
