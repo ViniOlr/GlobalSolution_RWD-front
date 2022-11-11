@@ -321,3 +321,24 @@ export const Cadastro = styled.section`
         }
     }
 `;
+
+export const SectionFooter = styled.footer`
+    width: 100%;
+    padding: 30px 0;
+    background-color: black;
+    position: relative;
+    bottom: 0;
+    > div {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+    }
+    .integrantes {
+        ul {
+            margin: 10px 0 0 30px;
+        }
+    }
+    a {
+        color: white;
+    }
+`;

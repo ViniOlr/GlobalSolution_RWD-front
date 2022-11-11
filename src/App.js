@@ -8,6 +8,7 @@ import ConCarro from './Components/Consulta/ConCarro';
 import ConEmpresa from './Components/Consulta/ConEmpresa';
 import ConMotorista from './Components/Consulta/ConMotorista';
 import ConUsuario from './Components/Consulta/ConUsuario';
+// import Footer from './Components/Footer/Footer';
 import Header from './Components/Header/Header';
 import Home from './Components/Home/Home';
 import Login from './Components/Login/Login';
@@ -37,6 +38,7 @@ function App() {
         <Route path='/consulta-empresa' element={<ConEmpresa />} />
         <Route path='/editar-empresa/:id' element={<CadEmpresa />} />
       </Routes>
+      {/* <Footer /> */}
     </>
   );
 }

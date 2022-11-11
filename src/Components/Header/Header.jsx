@@ -6,8 +6,12 @@ const Header = ()=> {
 
     const logout = ()=>{
         sessionStorage.removeItem("usuario-validado")
-        window.location = '/login'
+        window.location = '/'
     }
+    
+    const login = (()=>{
+        window.location = '/login'
+    })
 
     const usuario = sessionStorage.getItem("usuario-validado")
 
@@ -40,7 +44,7 @@ const Header = ()=> {
                                 <li><Link to='/consulta-empresa'>Empresa</Link></li>
                             </ul>
                         </li>
-                        <li><Link to='/login'><button onClick={usuario && (logout)}>{usuario ? 'Logout' : 'Logar'}</button></Link></li>
+                        <li><button onClick={usuario ? logout : login}>{usuario ? 'Logout' : 'Logar'}</button></li>
                     </ul>
                 </nav>
             </div>
